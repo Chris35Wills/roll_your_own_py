@@ -15,30 +15,34 @@ import time as time
 
 def check_output_dir(filename):
 	'''
-	Checks if the designated directory name exists, creating it if it doesn't
+	Checks if the designated directory name exists, creating the directory if it doesn't.
 
 	INPUT
-	filename = Complete path and filename of proposed output (e.g. 'C:/foo.txt')
+	filename = Complete path (e.g. 'C:/foo/')
 
 	RETURNS
-	nothing
+	Message reaffirming existance if true
+	Message stating dirrectory creation if false
 	'''
 	dirname = os.path.dirname(filename)
 	if not os.path.isdir(dirname):	
-		print "%s DOESN'T exist...\n" % dirname
 		os.makedirs(dirname) 
-		print "...but it does now"
+		print "%s DIDN'T exist... but it does now" % dirname
+	else:
+		print "%s exists." % dirname
 
 def check_if_file_exists(filename):
 	'''
-	Checks an path/file string to see if the designated file exists.
-	If file already exists, creates a time stamped version if it does
+	Checks a path/file string to see if the designated file exists.
+	If file already exists, creates a time stamped version returned as a string.
+
+	THIS DOESN'T ACTUALLY CREATE A FILE, JUST A STRING VARIABLE THAT CAN THEN BE USED FOR FILE CREATION. 
 
 	INPUT
 	filename = Complete path and filename of proposed output (e.g. 'C:/foo.txt')
 	
 	RETURNS
-	filename (modified if already existing)
+	filename string (modified if already existing)
 	'''
 
 	if os.path.isfile(filename):	
@@ -58,6 +62,6 @@ def check_if_file_exists(filename):
 		return filename
 
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	print("Wrappers for checking if directories or files for output exist, creating them if necessary")
 
