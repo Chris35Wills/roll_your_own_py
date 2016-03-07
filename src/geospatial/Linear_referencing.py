@@ -31,6 +31,8 @@ def densify(infile, desired_spacing=200., projection=pyproj.Proj("+init=EPSG:432
 	OUTPUTS:
 	
 	
+	Example of function call: call_linear_referencing.py
+
 	Modifed from A.Tedstone
 	This version: Chris Williams
 	@date: 03/03/16
