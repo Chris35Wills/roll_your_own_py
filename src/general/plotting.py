@@ -22,6 +22,25 @@ def plot(array, title='', cbar=False):
 	if title != '': plt.title(title)
 	plt.show()
 
+def mesh_grid(array):
+	"""
+	Creates a mesh grid of an input array
+	VARIABLES
+	
+		array	a 2d input array
+	
+	RETURN
+		xv		x coordinate mesh of same dimensions as array
+		yv		y coordinate mesh of same dimensions as array
+	"""
+
+	ny,nx=array.shape
+	x = np.linspace(0, 1, nx)
+	y = np.linspace(0, 1, ny)
+	xv, yv = np.meshgrid(x, y)
+	
+	return xv, yv
+	
 def plot_3d_surface(array, title=''):
 	"""
 	Simple 3D surface plot - takes in a 2D array, creates a meshgrid and displays it in 3D
@@ -32,7 +51,8 @@ def plot_3d_surface(array, title=''):
 	RETURNS
 		Nothing
 	"""
-		ny,nx=array.shape
+	
+	ny,nx=array.shape
 	x = np.linspace(0, 1, nx)
 	y = np.linspace(0, 1, ny)
 	xv, yv = np.meshgrid(x, y)
