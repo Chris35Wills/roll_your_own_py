@@ -51,7 +51,7 @@ def plot_3d_surface(array, title=''):
 	RETURNS
 		Nothing
 	"""
-	
+
 	ny,nx=array.shape
 	x = np.linspace(0, 1, nx)
 	y = np.linspace(0, 1, ny)
