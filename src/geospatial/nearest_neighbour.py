@@ -16,18 +16,18 @@ def get_nn(xy_1, xy_2, nn=1, radius=100):
 
 		xy_2 		xy positions used to query tree made from xy_1
 
-		nn 			which neighbour to return
+		nn 		which neighbour to return
 
 		radius 		search radius in units of xy coordinates of xy_1 and xy_2
 
 	RETURNS
 
 		indxs 		of length xy_2 (i.e. a value for every position in xy2) and each value 
-					represents the nn neighbour xy in xy_1 to the given index position of xy_2
+				represents the nn neighbour xy in xy_1 to the given index position of xy_2
 
 		dists 		of length xy_2 (i.e. a value for every position in xy2) and each value 
-					represents the distance of the nn neighbour xy in xy_1 to the given index 
-					position of xy_2
+				represents the distance of the nn neighbour xy in xy_1 to the given index 
+				position of xy_2
 
 	"""
 	tree = scipy.spatial.KDTree(xy_1, leafsize=100)
