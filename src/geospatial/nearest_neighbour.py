@@ -27,7 +27,8 @@ def get_nn(xy_1, xy_2, nn=1, radius=100):
 
 		dists 		of length xy_2 (i.e. a value for every position in xy2) and each value 
 				represents the distance of the nn neighbour xy in xy_1 to the given index 
-				position of xy_2
+				position of xy_2 - if no nearest neighbour is found within the radius distance, 
+				this will return as inf
 
 	"""
 	tree = scipy.spatial.KDTree(xy_1, leafsize=100)
