@@ -7,7 +7,7 @@ library(fields) 	# for thin plate spline functionality
 #' Create a 1/0 raster mask for use with clipping regions relative to observation point density
 #'
 #' @param xy An xy data list
-#' @param std_dev_scalar The scalar by which to multiple the observation density standard deviation, which is then used to threshold the mask (deafult = 2)
+#' @param std_dev_scalar The scalar by which to multiple the observation density standard deviation, which is then used to threshold the mask (default = 2)
 #' @param plotting A boolean option for creating plots as the function runs (deafult = TRUE)
 #' @examples
 #' x<-c(1,2,3,4)
