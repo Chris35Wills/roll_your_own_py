@@ -32,7 +32,7 @@ def get_nn(xy_1, xy_2, nn=1, radius=100):
 
 	"""
 	tree = scipy.spatial.KDTree(xy_1, leafsize=100)
-	dists, indxs = tree.query(xy_2, k=1, distance_upper_bound=radius)
+	dists, indxs = tree.query(xy_2, k=nn, distance_upper_bound=radius)
 
 	return dists, indxs
 
